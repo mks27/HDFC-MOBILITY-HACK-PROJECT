@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="normalize.css" />
+  <link rel="stylesheet" type="text/css" href="demo.css" />
+  <link rel="stylesheet" type="text/css" href="set1.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>plan1</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="agency.min.css" rel="stylesheet">
+
+    <!--  footer-->
+	
+      <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+  .carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+/* Reposition the controls slightly */
+.carousel-control {
+    left: -12px;
+}
+.carousel-control.right {
+    right: -12px;
+}
+/* Changes the position of the indicators */
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+    background: #c0c0c0;
+}
+.carousel-indicators .active {
+background: #333333;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1003; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 300%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    z-index : 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0),0 6px 20px 0 rgba(0,0,0,0);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #666666;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width: 120px;
+  height:20px;
+  line-height:3px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+ /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+	
+	.button2 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width: 120px;
+  height:20px;
+  line-height:3px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+	
+
+.button3 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width: 120px;
+  height:20px;
+  line-height:3px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button3:hover span {
+  padding-right: 25px;
+}
+
+.button3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button4 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width: 120px;
+  height:20px;
+  line-height:3px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button4 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button4:hover span {
+  padding-right: 25px;
+}
+
+.button4:hover span:after {
+  opacity: 1;
+  right: 0;
+}	
+	
+	
+.button5 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width: 120px;
+  height:20px;
+  line-height:3px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button5 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button5:hover span {
+  padding-right: 25px;
+}
+
+.button5:hover span:after {
+  opacity: 1;
+  right: 0;
+}	
+	
+	
+
+</style>
+</head>
+
+<body id="page-top" class="index">
+
+<button type="button" id="myBtn" class="btn btn-success" style="width:4%;height:200px;position: fixed;z-index: 200;margin-top: 15%;">a<br>s<br>k<br>|<br>a<br>g<br>e<br>n<br>t</button>
+<!-- ***************************** -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" style = "width : 60%">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2 style="margin-top: 5x">Ask Agent</h2>
+    </div>
+    <div class="modal-body" style=" margin-top : 30px">
+      <section class="content bgcolor-1">
+				<span class="input input--haruki">
+					<input class="input__field input__field--haruki" type="text" id="input-1" />
+					<label class="input__label input__label--haruki" for="input-1">
+						<span class="input__label-content input__label-content--haruki">Name</span>
+					</label>
+				</span>
+        <span class="input input--haruki">
+					<input class="input__field input__field--haruki" type="text" id="input-1" />
+					<label class="input__label input__label--haruki" for="input-1">
+						<span class="input__label-content input__label-content--haruki">Email-address</span>
+					</label>
+				</span>
+				<span class="input input--haruki">
+					<input class="input__field input__field--haruki" type="text" id="input-1" />
+					<label class="input__label input__label--haruki" for="input-1">
+						<span class="input__label-content input__label-content--haruki">Your query</span>
+					</label>
+				</span>
+        </section>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript">
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+    }
+</script>
+
+ <script src="js/jssor.slider-22.1.8.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideDuration: 800,
+              $SlideEasing: $Jease$.$OutQuint,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*responsive code end*/
+        };
+    </script>
+
+
+<!-- ***************************** -->
+
+
+     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color:black;">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header page-scroll">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                                </button>
+                                <a class="navbar-brand page-scroll" href="#page-top" style="margin-top: -18%;z-index : 1001" ><img src="img/hdfc-logo.png"></a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="hidden">
+                                        <a href="#page-top"></a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="index.html" style="color:white; font-size: 20px;">Home</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="index.html#services" style="color: white; font-size: 20px;">Plans</a>
+                                    </li>
+
+                                    <li class="dropdown">
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 20px;">Benefits <span class="caret"></span></a>
+                                         <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another </a></li>
+                                            <li><a href="#">Sometg</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Separat</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Onemoe</a></li>
+                                        </ul>
+                                    </li>
+                                     <li class="dropdown">
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white; font-size: 20px;">Premium Policy<span class="caret"></span></a>
+                                         <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">One more separated link</a></li>
+                                        </ul>
+                                    </li>
+
+
+
+
+                                    <li>
+                                        <a class="page-scroll" href="index.html#footer" style="color: white; font-size: 20px;">Contact Us</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container-fluid -->
+        </nav>
+
+            <!-- Navigation -->
+
+
+
+   
+
+
+
+
+  <div class="fixed-action-btn vertical" >
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+  <img src="img/iconimg.png" alt="" style="position:fixed; top:550px;left : 50px; height :100px; width:100px">
+
+
+<!--*******************************************-->
+<section id="services" style="height:600px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Protect Plans By Hdfc Life</h2>
+					<p>Term plans are typically low cost insurance plans that provide full protection and financial stability to your loved ones in case of any unforeseen events.
+					HDFC Life presents a variety of term insurance plans and policies in India to best meet your needs.</p>
+					<h3>What is Term Insurance</h3>
+					<p>Term insurance is a life insurance product offered by an insurance company which offers financial coverage to the policy holder for a specific time period.
+					In case of death of the insured individual during the policy term, the death benefit is paid by the company to the beneficiary.</p>
+                </div>
+            </div>
+
+			<!-- plans part division  -->
+	
+    <div class="container-fluid">
+    <div class="col-sm-3"> 
+      <img src="img/1.jpg" class="img-responsive" style="width:100%" alt="Image">   
+    </div>
+    <div class="col-sm-8" >
+      <div class="well">
+	  <h3>HDFC Life Click 2 Protect Plus</h3>
+       <p>HDFC Life Click 2 Protect Plus is a term insurance plan in India which provides you comprehensive protection at an affordable price and 
+	   helps you to protect yourself and your loved ones against the uncertainties that life may throw at you. This term life insurance policy provides 
+	   wide range of cover options and you can choose the cover depending on your need. You can even secure your family’s day to day requirements when you 
+	   are not around by way of monthly income under Income & Income Plus Option.</p>
+	   <button class="button" style="vertical-align:middle"><span>Buy </span></button>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container-fluid">
+    <div class="col-sm-8" >
+      <div class="well">
+	  <h3>How to Choose the Right Term Insurance Plan for You?</h3>
+       <p>Selecting the right term insurance plan involves focusing on the key features that can make a difference to you and your dependents.</p>
+<p>We have shortlisted some of the more important features for you:</p>
+<p>1.Human life value: The main reason for taking life insurance is to offer financial cover to your dependents in your absence. They expect the insurance policy to provide financial cover to the dependents in their absence.</p>
+  <p>2.Cost: We have all heard that term insurance plans are the cheapest. But that does not mean they can’t get cheaper. Go for term plans with the lowest expenses since this translates into lower premiums for the same cover.</p> 
+	<p>3.Riders: The best term life insurance plan for you is the one that has all the angles covered. One way to achieve this is through riders.
+	A rider is an add-on to the primary policy, which offers benefits over and above the policy subject to certain conditions. The policyholder can attach 
+	riders to the term plan. So if let’s say there is a critical illness rider or a critical illness policy, he is entitled to receive the sum assured on 
+	being diagnosed with the same.</p>
+	<p>4.Enhanced Cover: A feature offered by term plans of certain insurers is the flexibility to enhance the life cover during critical stages of the
+	policyholder’s life. For instance, an insurer may allow policyholders to enhance the life cover by 50% at the time of marriage and by 25% at the time of
+	turning a parent.</p>
+	<p>5.Convenience: Across the gamut of life insurance plans, one finds term life insurance seeing the maximum innovation. For one, costs and by extension 
+	premium rates have been reduced considerably and this process is on. Buying a term plan has been made easier thanks to the internet. It is now possible 
+	for a healthy individual, as defined by the insurer, to buy a term plan on the company’s website without taking a medical test.</p>
+	 <button class="button2" style="vertical-align:middle"><span> Buy</span></button>
+	</div>
+    </div>
+	<div class="col-sm-3"> 
+      <img src="img/2.jpg" class="img-responsive" style="width:100%" alt="Image">   
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="col-sm-3"> 
+      <img src="img/3.jpg" class="img-responsive" style="width:100%" alt="Image">   
+    </div>
+    <div class="col-sm-8" >
+      <div class="well">
+	  <h3>Why do I need a Term Insurance Plan?</h3>
+       <p>Protection Plan help you shield your family from uncertainties in life due to financial losses in terms of loss of income that may dawn upon them 
+	   in case of your untimely demise or critical illness. Securing the future of one's family is one of the most important goals of life.They are all 
+	   the more important if you are the chief wage earner in your family. No matter how much you have saved or invested over the years, sudden eventualities,
+	   such as death or critical illness, always tend to affect your family financially apart from the huge emotional loss.</p>
+      <button class="button3" style="vertical-align:middle"><span>Buy  </span></button>
+	 </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="col-sm-8" >
+      <div class="well">
+	  <h3>What is accidental death benefit rider?</h3>
+       <p>Life insurance offers many options and add-ons that make the policy more meaningful to the policyholder. Add-ons or riders as they are also called allow the policyholder to customize the policy to suit specific needs
+One such add-on is in the accidental death benefit rider.The rider safeguards the family from accidents / mishaps resulting in death which can impair the family’s income for several months or even years.
+In an event of death, the insured gets additional amount - usually twice the sum assured.</p>
+ <button class="button4" style="vertical-align:middle"><span>Buy  </span></button>     
+	 </div>
+    </div>
+	<div class="col-sm-3"> 
+      <img src="img/4.jpg" class="img-responsive" style="width:100%" alt="Image">   
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="col-sm-3"> 
+      <img src="img/5.jpg" class="img-responsive" style="width:100%" alt="Image">   
+    </div>
+    <div class="col-sm-8" >
+      <div class="well">
+	  <h3>HDFC Life CSC Suraksha - Term Insurance Plan</h3>
+       <p>The Common Services Centre (CSC) is a strategic cornerstone of the National e-Governance Plan (NeGP), approved by the Government in May 2006,
+	   to introduce e-governance on a massive scale in Rural India. These are ICT enabled front end service delivery points at the village level for delivery
+	   of Government, Financial, Social and Private Sector services in the areas of agriculture, health, education, entertainment, FMCG products, banking, 
+	   insurance, pension, utility payments, etc. <font color="blue">HDFC Life CSC Suraksha</font> is a simple, hassle free term insurance plan. This plan provides for a payment of a lump sum in the event of your unfortunate death.</p>
+   <button class="button5" style="vertical-align:middle"><span>Buy  </span></button>   
+	 </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script type="text/javascript">jssor_1_slider_init();</script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   <script>
+
+                    $(document).ready(function() {
+                            $('#myCarousel').carousel({
+                                interval:100000
+                            })
+                    });
+
+                </script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/classie.js"></script>
+		<script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
+
+</body>
+
+
+</html>
